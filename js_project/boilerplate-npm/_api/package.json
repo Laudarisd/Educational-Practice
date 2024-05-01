@@ -1,0 +1,22 @@
+{
+    "name": "fcc-learn-npm-package-json",
+    "author": "sudip",
+    "description": "A project that does something awesome",
+    "keywords": [ "freecodecamp", "microservice", "guide" ],
+    "license": "MIT",
+    "version": "1.2.0",
+    "dependencies": {
+      "package-name": "version"
+    },
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "engines": {
+      "node": "8.11.2"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://idontknow/todo.git"
+    }
+  }

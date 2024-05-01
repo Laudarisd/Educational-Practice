@@ -1,0 +1,13 @@
+function getIndexToIns(arr, num) {
+  // Find my place in this sorted array.
+  let len = arr.length;
+  let smallerCount = 0;
+  for (let i = 0; i < len; i++) {
+    if (num > arr[i]) {
+      smallerCount++;
+    }
+  } // counts how many array numbers are smaller than num
+  return smallerCount; // the above equals num's position in a sorted array
+}
+
+getIndexToIns([40, 60], 50);
