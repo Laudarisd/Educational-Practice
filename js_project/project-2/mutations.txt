@@ -1,0 +1,8 @@
+function mutation(arr) {
+  const firstEl = arr[0].toLocaleLowerCase();
+  const secondEl = arr[1].toLocaleLowerCase().split('');
+  return secondEl.every(el => firstEl.includes(el));
+}
+
+
+mutation(["hello", "hey"]);
