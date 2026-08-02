@@ -1,0 +1,78 @@
+.ai-ml-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 20px;
+    padding: 20px;
+}
+
+.intro-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.course-listing {
+    margin-top: 30px;
+}
+
+.course-card {
+    background-color: #e7e7e7;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.Chapter-section {
+    margin-top: 30px;
+    background-color: #e7e7e7;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.features-section {
+    margin-top: 30px;
+    background-color: #e7e7e7;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.features-section ul {
+    list-style: inside;
+}
+
+.cta-section {
+    margin-top: 30px;
+    text-align: center;
+    background-color: #d1ecf1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cta-section button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cta-section button:hover {
+    background-color: #0056b3;
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #5b5b5b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+

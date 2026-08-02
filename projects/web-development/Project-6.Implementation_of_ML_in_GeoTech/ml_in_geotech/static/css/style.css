@@ -1,0 +1,417 @@
+/* style.css */
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+nav {
+  background-color: #f5f5f5;
+  padding: 30px;
+  height: 10vh;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  margin: 20px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+p {
+  font-size: 24px;
+}
+
+.logo-container {
+  float: left;
+  width: 5%;
+}
+
+nav ul {
+  float: right;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a4c1db;
+  padding: 30px;
+  font-size: 20px;
+  z-index: 1;
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+}
+
+.logo-container img {
+  max-height: 40px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+nav a {
+  color: #fff; /* or any other color you want */
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-right: 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.wrapper {
+  display: flex;
+}
+
+.left-section {
+  width: 30%;
+  background-color: #187a92;
+  margin-top: 0px; /* Add margin-top to create a gap */
+  height: 50vh;
+
+}
+
+.right-section {
+  width: 70%;
+  position: relative;
+  margin-top: 0px;  
+
+}
+
+.title-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: image-change 20s infinite;
+  /*margin-top: 10px; Add margin-top to create a gap */
+  z-index: 1;
+}
+
+@keyframes image-change {
+  0% {
+    background-image: url('../img/1.jpeg');
+  }
+  25% {
+    background-image: url('../img/2.jpeg');
+  }
+  50% {
+    background-image: url('../img/3.jpeg');
+  }
+  75% {
+    background-image: url('../img/4.jpeg');
+  }
+  100% {
+    background-image: url('../img/5.jpeg');
+  }
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 2.5vw;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+
+.content h2:nth-child(2) {
+  color: #03a9f4;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.container3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-bottom: 50px;
+  z-index: 50;
+}
+
+.wrapper1 {
+  display: flex;
+  flex: 1;
+}
+
+.left-section1 {
+  flex: 1 20%;
+  padding: 10px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  background-color: rgb(156, 82, 82);
+  z-index: 1;
+}
+
+.right-section1 {
+  flex: 1 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: rgb(232, 241, 245);
+  z-index: 1;
+}
+
+.upload_plot_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.upload_file,
+.csvPlot,
+.task-container {
+  flex-basis: calc(33.33% - 40px);
+  max-width: calc(33.33% - 40px);
+  margin: 20px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.upload_file h2,
+.csvPlot h2,
+.task-container h2 {
+  margin-bottom: 20px;
+}
+
+.upload_file form,
+.csvPlot form,
+.task-container form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload_file form input[type="file"],
+.upload_file form select,
+.csvPlot form select,
+.task-container form select {
+  margin-bottom: 10px;
+}
+
+.csv_plot_section {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.csvPlot .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.csvPlot .container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 768px) {
+  .container3 {
+    justify-content: center;
+  }
+
+  .left-section1 {
+    flex: 1 1 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .right-section1 {
+    flex: 1 1 100%;
+  }
+
+  .upload_file,
+  .csvPlot,
+  .task-container {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container3 {
+    justify-content: center;
+  }
+
+  .upload_file,
+  .csvPlot,
+  .task-container {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 10px;
+  }
+}
+
+
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Footer %%%%%%%%%%%%%%%%%%%%%%% */
+
+/* Footer */
+body {
+  margin: 0;
+  padding-bottom: 70px; /* Increase padding to create space for the footer */
+}
+
+.footer {
+  margin-top: 20px; /* Add a top margin */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Set the background color to a transparent black */
+  padding: 5px; /* Decreased padding */
+  text-align: left; /* Align text to the left */
+  font-size: inherit; /* Maintain the font size */
+  height: 30px; /* Decreased height of the footer bar */
+  color: #ffffff; /* Set the font color to white */
+  display: none; /* Hide the footer by default */
+}
+
+.footer.show-footer {
+  display: block; /* Show the footer when the class is added */
+}
+
+.footer-text-left {
+  display: inline-block; /* Display text in a line */
+}
+
+.footer-content-right {
+  display: inline-block; /* Display logo in a line */
+  float: right; /* Float logo to the right */
+}
+
+.footer-content-right .icon-style {
+  width: 15px; /* Decreased logo size */
+  height: 15px; /* Decreased logo size */
+  margin-left: 10px; /* Add some space between logos */
+}
+
+.icon-style {
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon-style:hover {
+  transform: scale(1.2);
+  background-color: #2E6AFF;
+  border-radius: 50%;
+}
+
+/* add this rule to make the footer stay at the bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  flex: 1;
+}

@@ -1,0 +1,60 @@
+@import "./theme.css";
+
+/* Base reset and typography */
+* { box-sizing: border-box; }
+html { font-size: var(--font-size-base); }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--bg);
+  background-image: var(--grad-soft);
+  min-height: 100vh;
+}
+
+/* Default inline element behavior */
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
+
+/* Shared content container */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* Shared vertical section spacing */
+.section {
+  padding: 56px 0;
+}
+
+/* Shared card surface style */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Shared heading utility */
+.h1 {
+  font-size: var(--font-size-xl);
+  line-height: 1.15;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+/* Shared paragraph utility */
+.p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+}
+
+/* Shared small paragraph utility */
+.p-sm {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}

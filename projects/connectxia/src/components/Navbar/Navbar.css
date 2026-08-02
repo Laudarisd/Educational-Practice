@@ -1,0 +1,126 @@
+/* Sticky navbar shell */
+.cx-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  background: rgba(247, 251, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Navbar row layout */
+.cx-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+/* Full-width container with side inset */
+.cx-nav .container {
+  max-width: none;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+/* Ensure full row width for left/right alignment */
+.cx-nav__inner {
+  width: 100%;
+}
+
+/* Brand area */
+.cx-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Brand primary text */
+.cx-brand__name {
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Optional brand subtitle */
+.cx-brand__sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* Dropdown trigger button */
+.cx-dd-btn {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+/* Screen-reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Hamburger icon (three lines) */
+.cx-menu-icon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.cx-menu-icon span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--muted);
+}
+
+/* Dropdown menu panel */
+.cx-dd {
+  position: absolute;
+  right: 18px;
+  margin-top: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  min-width: 180px;
+}
+
+/* Dropdown item row */
+.cx-dd__item {
+  display: block;
+  padding: 12px 14px;
+  color: var(--text);
+}
+.cx-dd__item:hover {
+  background: rgba(59, 130, 246, 0.08);
+}
+.cx-dd__item.active {
+  background: rgba(14, 165, 164, 0.10);
+  font-weight: 650;
+}

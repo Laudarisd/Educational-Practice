@@ -1,0 +1,28 @@
+{% extends 'nav_home.html' %}
+{% load static %}
+
+{% block styles %}
+<style>
+/* Add additional CSS styles specific to the new section */
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Existing code for nav and left/right sections -->
+<div class="wrapper">
+  <div class="left-section">
+    <!-- Content for the left section -->
+  </div>
+  <div class="right-section">
+    <!-- Content for the right section -->
+  </div>
+</div>
+
+<!-- New section -->
+<div class="container-fluid">
+  <!-- Content for the new section -->
+  {% block plotCSV %}
+    <!-- Add your specific content for the plotCSV section here -->
+  {% endblock %}
+</div>
+{% endblock %}

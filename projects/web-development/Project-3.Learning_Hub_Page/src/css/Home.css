@@ -1,0 +1,79 @@
+.home-container {
+    max-width: 100vw; /* 100% of the viewport width */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in the element's total width */
+
+}
+
+
+.home-introduction {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.home-sections-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* This will allow items to wrap to the next line */
+
+}
+
+.home-section {
+    flex-basis: 30%;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack the children vertically */
+    justify-content: space-between; /* Space between top and bottom content */
+    padding-bottom: 30px; /* Add padding to ensure space for the button */
+
+}
+
+.home-section img {
+    width: 100%; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distorting */
+    border-radius: 8px;
+    margin-bottom: 15px; /* Add some space below the image */
+}
+.home-section h2 {
+    margin-top: 15px;
+}
+
+.home-section p {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+.home-section button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    align-self: flex-end; /* Align the button to the right */
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+.home-section button:hover {
+    background-color: rgb(118, 118, 128);
+}
+
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+    .home-section {
+        flex-basis: 100%; /* Full width on smaller screens */
+    }
+    .home-section button {
+        /* ... existing styles ... */
+        align-self: center; /* Center the button on smaller screens */
+    }
+}
+

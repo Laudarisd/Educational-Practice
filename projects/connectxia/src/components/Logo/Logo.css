@@ -1,0 +1,11 @@
+/* Logo wrapper */
+.cx-logo {
+  display: grid;
+  place-items: center;
+}
+/* SVG scaling behavior */
+.cx-logo svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

@@ -1,0 +1,146 @@
+body {
+  font-family: 'Arial', sans-serif; /* Choose a font-family that suits your design */
+  background: #ffffff; /* Set a background color if needed, white is default */
+  color: #333333; /* Set a base text color, dark gray is easy on the eyes */
+}
+
+/* Style for centering slide images and controlling size */
+.custom-space {
+  margin-top: 50px; /* Or any other value you prefer */
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.slider-container {
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  margin-top: 50px; /* Space above */
+  margin-bottom: 50px; /* Space below */
+  overflow: hidden;
+  position: relative;
+}
+
+.image-slider {
+  width: 400%; /* Adjusted to accommodate 4 slides */
+  height: 100%;
+  display: flex;
+  animation: slide-animation 20s infinite; /* 5s for each image */
+}
+
+.slide {
+  width: 25%; /* Each slide is 25% of the total width */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes slide-animation {
+  0%, 25% { transform: translateX(0); }
+  25.001%, 50% { transform: translateX(-25%); }
+  50.001%, 75% { transform: translateX(-50%); }
+  75.001%, 100% { transform: translateX(-75%); }
+}
+
+
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+.container {
+  padding-left: 15px; /* Or any other value */
+  padding-right: 15px; /* Or any other value */
+}
+.col-md-6 {
+  padding: 20px; /* Adds padding inside the columns */
+  margin-bottom: 20px; /* Adds space between columns when stacked on smaller screens */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  background-color: #fff; /* White background for the column content */
+}
+
+
+/* Title styling with border */
+.col-md-6 h2 {
+  padding: 10px;
+  border: 2px solid rgb(5, 5, 5); /* Dark border for the title */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Additional space between columns on larger screens */
+@media (min-width: 768px) {
+  .col-md-6 {
+      padding-left: 30px; /* Increased left padding */
+      padding-right: 30px; /* Increased right padding */
+  }
+}
+
+
+/* Style adjustments for the form elements if needed */
+#player-number-form .form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+.btn-new-game {
+  background-color: #3a4cee; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around the text */
+  margin: 20px 0; /* Margin above and below the button */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-new-game:hover {
+  background-color: #5c5d8f; /* Darker green on hover */
+
+}
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.history-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.history-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2 */
+footer {
+  background-color: #f1f1f1;
+  padding: 40px 0;
+  color: #6c757d;
+}
+
+footer a {
+  color: #6c757d;
+}
+
+footer a:hover {
+  color: #0a58ca;
+}
+
+footer .bi {
+  margin-right: 10px;
+  font-size: 1.4rem;
+}

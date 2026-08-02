@@ -1,0 +1,59 @@
+.code-home-container {
+    padding: 20px;
+}
+
+.code-introduction {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.code-sections-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.code-section {
+    flex-basis: 30%;
+    border: 1px solid #ecebeb;
+    border-radius: 8px;
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.code-section img {
+    width: 100%; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distorting */
+    border-radius: 8px;
+    margin-bottom: 15px; /* Add some space below the image */
+}
+.code-section h2 {
+    margin-top: 15px;
+}
+
+.code-section p {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+.code-section button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}
+
+.code-section button:hover {
+    background-color: rgb(118, 118, 128);
+}
+
+.code-more-courses-message p {
+    font-style: italic;
+    color: #555;
+}

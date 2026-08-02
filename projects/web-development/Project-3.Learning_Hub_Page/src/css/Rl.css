@@ -1,0 +1,85 @@
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #5b5b5b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Rl.css */
+.rl-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.rl-page h1 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rl-page h2 {
+    color: #0066cc;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.rl-page p {
+    margin-bottom: 15px;
+}
+
+.rl-intro,
+.rl-basics,
+.rl-advanced {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.rl-intro {
+    background-color: #eef5ff;
+}
+
+.rl-advanced {
+    background-color: #fff0f0;
+}
+
+/* Add more specific styles for elements like lists, images, buttons, etc. */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design: Adjusts layout based on screen size */
+@media (max-width: 768px) {
+    .rl-page h1, .rl-page h2 {
+        text-align: left;
+    }
+}

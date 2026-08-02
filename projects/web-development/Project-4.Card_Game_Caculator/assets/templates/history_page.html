@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<!-- <style>
+    /* In your assets/css/style.css file */
+
+.btn, .btn-primary, .btn-warning, .btn-new-game {
+    background-color: #007bff !important; /* Force override */
+    color: white !important;
+    border-radius: 5px !important;
+    /* Add other styles as desired */
+}
+
+    </style> -->
+
+<head>
+    <title>Game History</title>
+    <!-- Add any stylesheets or meta tags here -->
+</head>
+<body>
+    <!-- Cancel Button -->
+    <div style="text-align: right; padding: 10px;">
+        <button id="cancelButton" class="btn btn-warning">Cancel</button>
+    </div>
+
+    <h1>History</h1>
+    <div id="historyDisplay">
+        <!-- History will be displayed here -->
+    </div>
+
+    <!-- JavaScript to load and display history -->
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var cancelButton = document.getElementById('cancelButton');
+            if (cancelButton) {
+                cancelButton.addEventListener('click', function() {
+                    window.history.back();
+                });
+            }
+
+            var historyDisplay = document.getElementById('historyDisplay');
+            var records = JSON.parse(localStorage.getItem('gameRecords')) || [];
+            historyDisplay.innerHTML = '';
+
+            records.forEach(record => {
+                var recordDiv = document.createElement('div');
+                recordDiv.innerHTML = `<h2>Recorded Date: ${record.date}</h2>`;
+                
+                record.rounds.forEach(round => {
+                    recordDiv.innerHTML += `<h3>Round: ${round.round}</h3>`;
+                    round.players.forEach(player => {
+                        recordDiv.innerHTML += `<p>${player.name}: Total Points: ${player.score}</p>`;
+                    });
+                });
+
+                historyDisplay.appendChild(recordDiv);
+            });
+        });
+    </script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var cancelButton = document.getElementById('cancelButton');
+            if (cancelButton) {
+                cancelButton.addEventListener('click', function() {
+                    window.history.back();
+                });
+            }
+    
+            var historyDisplay = document.getElementById('historyDisplay');
+            var records = JSON.parse(localStorage.getItem('gameRecords')) || [];
+            historyDisplay.innerHTML = '';
+    
+            records.forEach(record => {
+                var recordDiv = document.createElement('div');
+                recordDiv.innerHTML = `<h2>Recorded Date: ${record.date}</h2>` + record.scores;
+                historyDisplay.appendChild(recordDiv);
+            });
+        });
+    </script>
+    
+</body>
+</html>

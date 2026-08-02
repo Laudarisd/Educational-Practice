@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+/* In your assets/css/style.css file */
+
+.btn, .btn-primary, .btn-warning, .btn-new-game {
+    background-color: #1ea3d0 !important; /* Light blue color */
+    color: white !important;
+    border: 2px solid #add8e6 !important; /* Light blue border */
+    border-radius: 5px !important; /* Rounded corners with a radius of 5px */
+    /* Add other styles as desired, such as padding, font size, etc. */
+}
+
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Marriage Point Calculator</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+          <a class="navbar-brand" href="#">logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span> 
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ms-auto">
+              <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="assets/templates/rules.html">Rules</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+<!-- Navbar End -->
+
+
+
+<div class="slider-container">
+  <div class="image-slider">
+      <div class="slide" style="background-image: url('assets/img/screen/1.jpeg');"></div>
+      <div class="slide" style="background-image: url('assets/img/screen/2.png');"></div>
+      <div class="slide" style="background-image: url('assets/img/screen/3.jpeg');"></div>
+      <!-- Repeat the first image for a seamless loop -->
+      <div class="slide" style="background-image: url('assets/img/screen/1.jpeg');"></div>
+  </div>
+</div>
+
+
+
+
+
+<!-- ... -->
+
+
+  <div style="margin-bottom: 100px;"></div> <!-- You can adjust the margin size    as needed -->
+
+      <!-- Two column layout-->
+      <!-- Space below images -->
+  <div style="margin-bottom: 20px;"></div> <!-- You can adjust the margin size as needed -->
+  <div class="container">
+      <div class="row">
+          <!-- First Column -->
+          <div class="col-md-6">
+              <h2>Players & Points</h2>
+              <form id="player-number-form">
+                  <div class="form-group">
+                      <label for="number-of-players">Number of players:</label>
+                      <input type="number" id="number-of-players" class="form-control" name="number_of_players" min="2" max="10" style="width: 100px; display: inline-block;">
+                  </div>
+                  <!-- Rate input box -->
+                  <div class="form-group">
+                      <label for="rate">Rate:</label>
+                      <input type="number" id="rate" class="form-control" name="rate" style="width: 100px; display: inline-block;">
+                  </div>
+                  <button type="button" id="generate-players" class="btn btn-primary">Generate</button>
+              </form>
+              <!-- Player names section -->
+              <div id="player-names-section">
+                  <!-- Player list container will be filled with player name inputs -->
+                  <div id="player-list-container"></div>
+              </div>
+          </div>
+          <!-- Second Column -->
+          <div class="col-md-6">
+              <h2>Record Table</h2>
+              <div id="record-table"><!-- The generated table will go here --></div>
+              <!-- New Game Button -->
+              <!-- Add this next to your New Game button -->
+            <button id="undo-button" class="btn btn-warning">Undo Last Entry</button>
+            <button id="historyButton" class="btn">History</button>
+            <button id="new-game-button" class="btn-new-game">New Game</button>
+            <!-- Place this next to your New Game button -->
+
+          </div>
+      </div>
+      <!-- History Display Modal -->
+    <div id="historyDisplay" class="history-modal">
+      <!-- Game history will be displayed here -->
+      <!-- You might want to include a close button or a way to hide this modal -->
+    </div>
+  </div>
+
+
+  <div style="margin-bottom: 100px;"></div> <!-- You can adjust the margin size    as needed -->
+  
+
+
+<!-- Footer Start -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+          <a href="" class="me-4 text-reset">
+              <i class="bi bi-facebook"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+              <i class="bi bi-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+              <i class="bi bi-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+              <i class="bi bi-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+              <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+              <i class="bi bi-github"></i>
+          </a>
+      </div>
+      <!-- Right -->
+  </section>
+
+  <section class="">
+      <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <!-- Content -->
+                  <h6 class="text-uppercase fw-bold mb-4">
+                      <i class="bi bi-gem me-3"></i>Company name
+                  </h6>
+                  <p>
+                      Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+              </div>
+
+              <!-- Contact details -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold mb-4">
+                      Contact
+                  </h6>
+                  <p><i class="bi bi-house me-3"></i> Australia</p>
+                  <p><i class="bi bi-envelope me-3"></i> info@example.com</p>
+                  <!-- <p><i class="bi bi-phone me-3"></i> + 01 234 567 88</p>
+                  <p><i class="bi bi-printer me-3"></i> + 01 234 567 89</p> -->
+              </div>
+          </div>
+      </div>
+  </section>
+</footer>
+<!-- Footer End -->
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/submit.js"></script>
+<script src="assets/js/newgame_button.js"></script>
+<script src="assets/js/history_page.js"></script>
+<script src="assets/js/undo_button.js"></script>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+
+
+
+
+</body>
+</html>

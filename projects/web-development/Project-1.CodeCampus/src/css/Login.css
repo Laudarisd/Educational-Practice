@@ -1,0 +1,93 @@
+.login-container {
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 60px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.login-subtitle {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.login-slideshow-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.login-slideshow-container img {
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.login-slideshow-container img.active {
+  opacity: 1;
+}
+
+.login-form-container .input-group {
+  margin-top: 30px;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center;
+  margin-bottom: 10px; /* Space between input groups */
+}
+
+.login-form-container label {
+  margin-right: 10px; /* Space between label and input */
+  white-space: nowrap;
+}
+
+.login-form-container input {
+  flex-grow: 1; /* Input takes up remaining space */
+  padding: 8px;
+  border: 1px solid;
+  border-radius: 4px;
+  max-width: 250px; /* Maximum width of the input boxes */
+  text-align: center;
+
+}
+
+/* Style for the submit button, forgot password link, and sign up link */
+.login-form-container button{
+  background-color: #007bff;
+  width: auto; /* Only as wide as their content */
+  display: block; /* Each element on its own line */
+  margin: 10px auto; /* Center the element */
+  padding: 8px 16px;
+
+}
+.login-form-container a {
+  display: inline-block; /* Allows the width to fit content */
+  margin: 10px auto; /* Vertical margin and horizontally centered */
+  padding: 8px 16px;
+  text-align: center; /* Centers text inside the anchor tag */
+  text-decoration: none; /* Removes underline from links */
+  border-radius: 4px; /* Optional: if you want rounded corners */
+  max-width: 200px; /* Sets a maximum width, adjust as needed */
+  width: auto; /* Ensures the width is as wide as the content, up to max-width */
+}
+
+.login-form-container button:hover {
+  background-color: rgb(118, 118, 128);
+}
+
+.login-link {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+}

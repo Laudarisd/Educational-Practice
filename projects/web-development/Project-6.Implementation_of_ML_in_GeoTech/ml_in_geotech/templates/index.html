@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<!-- Nav bar menu -->
+<body class="container-fluid">
+  <nav>
+    <div class="logo-container">
+      <img src="{% static 'img/1.jpeg' %}" alt="Logo">
+    </div>
+    <ul>
+      <li><a href="#">page 1</a></li>
+      <li><a href="#">page 2</a></li>
+      <li><a href="#">page 3</a></li>
+      <li><a href="#">page 4</a></li>
+      <li><a href="#">page 5</a></li>
+      <li><a href="/contact/">contact</a></li>
+    </ul>
+  </nav>
+
+<div class="container2">
+  <!-- Main content-- Background images and test section -->
+  <div class="wrapper">
+    <div class="left-section">
+      <h2>Left Section Content</h2>
+      <p> What is machine learning and what can it do?
+      <!-- Add your content for the left section here -->
+    </div>
+    <div class="right-section">
+      <div class="title-container"
+          data-image-1="{% static 'img/1.jpeg' %}"
+          data-image-2="{% static 'img/2.jpeg' %}"
+          data-image-3="{% static 'img/3.jpeg' %}"
+          data-image-4="{% static 'img/4.jpeg' %}"
+          data-image-5="{% static 'img/5.jpeg' %}">
+          <div class="content">
+            <h2>Machine Learning In Geotech</h2>
+            <h2>Machine Learning In Geotech</h2>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+<div class="container3">
+  <div class="wrapper1">
+    <div class="left-section1">
+      <h2>Left Section Content</h2>
+      <p>What is machine learning and what can it do?</p>
+      <!-- Add your content for the left section here -->
+    </div>
+    <div class="right-section1">
+      <div class="upload_plot_wrapper">
+        <div class="upload_file">
+          <h2>Upload Your Data</h2>
+          <form method="POST" enctype="multipart/form-data" action="{% url 'csv_upload' %}">
+            {% csrf_token %}
+            <input type="file" name="document" id="document" required="required">
+            <button type="submit">Submit</button>
+        
+            <label for="x_column">Choose X Column:</label>
+            <select name="x_column" id="x_column">
+                {% for column in x_columns %}
+                <option value="{{ column }}">{{ column }}</option>
+                {% endfor %}
+            </select>
+        
+            <label for="y_column">Choose Y Column:</label>
+            <select name="y_column" id="y_column">
+                {% for column in y_columns %}
+                <option value="{{ column }}">{{ column }}</option>
+                {% endfor %}
+            </select>
+        
+            <label for="plot_type">Choose Plot Type:</label>
+            <select name="plot_type" id="plot_type">
+                <option value="scatter">Scatter Plot</option>
+                <option value="line">Line Plot</option>
+                <option value="hist">Histogram</option>
+                <option value="bar">Bar Plot</option>
+                <!-- Add more options for different plot types -->
+            </select>
+        </form>                 
+          
+          {% block messages %}
+          {% if messages %}
+          <div class="container" style="color: firebrick; margin-top: 20px">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+          </div>
+          {% endif %}
+          {% endblock %}
+          <button id="plotButton">Plot</button>
+        </div>
+        <div id="csv_plot_wrapper" class="csvPlot">
+          <h2> Data visualization</h2>
+          <div class="container" id="csv_plot">
+            <div class="plot-wrapper">
+              <p>Your Plot will be here</p>
+            </div>
+            {% block message %}
+            {% if messages %}
+            <div class="container" style="color: firebrick; margin-top: 10px">
+              {% for message in messages %}
+              {{ message }}
+              {% endfor %}
+            </div>
+            {% endif %}
+            {% endblock %}
+          </div>
+        </div>
+        <div class="task-container">
+          <h2>Train Your Data</h2>
+          <form method="POST" action="{% url 'submit_task' %}">
+            {% csrf_token %}
+            <div class="attribute-section">
+              <label for="training-features">Training Features:</label>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="training-features-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select Training Features
+                </button>
+                <div class="dropdown-menu" aria-labelledby="training-features-dropdown">
+                  {% for column in data_columns %}
+                  <a class="dropdown-item training-feature" href="#" data-value="{{ column }}">{{ column }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class="selected-features">
+              <h4>Selected Features:</h4>
+              <div class="selected-features-box">
+                <ul id="selected-features-list"></ul>
+              </div>
+            </div>
+            <div class="attribute-section">
+              <label for="test-feature">Test Feature:</label>
+              <select name="test-feature" id="test-feature">
+                {% for column in data_columns %}
+                <option value="{{ column }}">{{ column }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="attribute-section">
+              <label for="ml-model">ML Model:</label>
+              <select name="ml-model" id="ml-model">
+                <option value="Random Forest Classifier">Random Forest Classifier</option>
+                <option value="Support Vector Machine">Support Vector Machine</option>
+              </select>
+            </div>
+          </form>
+          <div class="training-parameters">
+            <!-- Display training parameters here after form submission -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<hr>
+<hr>  
+<!-- Add one more column-->
+
+
+
+<!--Section 7: Footer-->
+<div class="footer" id="footer">
+  <div class="footer-text-left">
+    <a href="" class="menu">home</a>
+    <a href="" class="menu">about</a> 
+    <a href="{% url 'contact' %}" class="menu">credits</a>
+  </div>
+  <div class="footer-content-right">
+    <a href="https://github.com/digitalocean"><img src="{% static 'img/Github.png' %}" class="icon-style" alt="Github"></a>
+    <a href="https://www.twitter.com/DigitalOcean"><img src="{% static 'img/Twitter.png' %}" class="icon-style" alt="Twitter"></a>
+    <a href="https://www.twitter.com"><img src="{% static 'img/Gmail.png' %}" class="icon-style" alt="Email"></a>
+  </div>
+</div>
+
+
+
+<!-- js files for handling contents , attributes and more-->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="{% static 'js/plot_selection.js' %}"></script>
+  <script src="{% static 'js/background_change.js' %}"></script>
+  <script src="{% static 'js/feature_selection.js' %}"></script>
+  <script src="{% static 'js/footer.js' %}"></script>
+
+
+
+
+
+</body>
+</html>

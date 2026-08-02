@@ -1,0 +1,121 @@
+/* Two-column hero layout */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* Shared hero panel sizing */
+.hero__left, .hero__right {
+  min-height: 420px;
+  overflow: hidden;
+}
+
+/* Inner spacing for left panel content */
+.hero__leftInner {
+  padding: 28px;
+}
+
+/* CTA row layout */
+.hero__ctaRow {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+/* Primary CTA button */
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 0;
+  color: white;
+  background: var(--grad-button);
+  box-shadow: 0 12px 22px rgba(14,165,164,0.18);
+  font-weight: 650;
+}
+
+/* Secondary ghost CTA */
+.hero__cta.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+/* Capability chips row */
+.hero__mini {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Single capability chip */
+.hero__chip {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.75);
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Slider wrapper */
+.hero__slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+}
+
+/* Individual slide */
+.hero__slide {
+  position: absolute;
+  inset: 12px;
+  border-radius: calc(var(--radius) - 4px);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.01);
+  transition: opacity 700ms ease, transform 700ms ease;
+  border: 1px solid var(--border);
+}
+
+/* Active slide state */
+.hero__slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Slide indicator row */
+.hero__dots {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Slide dot button */
+.hero__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.8);
+  background: rgba(15, 23, 42, 0.2);
+  cursor: pointer;
+}
+.hero__dot.active {
+  background: rgba(255,255,255,0.9);
+}
+
+/* Responsive hero layout */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero__left, .hero__right { min-height: 360px; }
+}

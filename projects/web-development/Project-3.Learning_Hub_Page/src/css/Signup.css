@@ -1,0 +1,83 @@
+.signup-form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+.signup-form input,
+.signup-form button {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.signup-form button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: rgb(118, 118, 128);
+}
+
+/* Style for the agreement label */
+.agreement-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the start */
+    margin-top: 10px;
+}
+
+.agreement-label input[type="checkbox"] {
+    margin-right: 5px; /* Adjust as needed */
+}
+
+.terms-conditions {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    margin-left: 50px; /* Adjust as needed */
+    margin-right: 50px; /* Adjust as needed */
+    background-color: rgb(226, 223, 220);
+
+}
+
+.terms-conditions h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.terms-conditions h3 {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+/* Container for the back button, ensuring it is centered */
+.signup-back-btn {
+    text-align: center; /* Centers the button horizontally */
+    margin-top: 20px; /* Adds some space above the button */
+}
+
+/* Styling for the button */
+.signup-back-btn button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color for the button */
+    border: none; /* Removes the border */
+    border-radius: 4px; /* Optionally round the corners */
+    max-width: 300px; /* Maximum width of the back button */
+    width: auto; /* Allows the width to fit the content */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    display: inline-block; /* Ensures the button does not stretch full width */
+}
+
+/* Adding a hover effect to the button for interactivity */
+.signup-back-btn button:hover {
+    background-color: #0056b3; /* Darker shade when hovered */
+}

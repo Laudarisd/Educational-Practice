@@ -1,0 +1,62 @@
+.fp-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.fp-container h2 {
+    margin-bottom: 15px;
+}
+
+.fp-container form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.fp-input {
+    padding: 10px;
+    margin-bottom: 20px; /* Adjust this to add more space below the input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    width: 100%; /* Full width of parent by default */
+    max-width: 300px; /* Maximum width of the input */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fp-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%; /* Full width of parent by default */
+    max-width: 300px; /* Maximum width of the button */
+    margin: 10px auto; /* Center the button and add margin above and below */
+}
+
+.fp-button:hover {
+    background-color: rgb(118, 118, 128);
+}
+
+.fp-message {
+    margin-top: 20px;
+}
+
+.fp-back-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.fp-back-btn button {
+    padding: 10px 20px;
+    max-width: 300px; /* Maximum width of the back button */
+    background-color: #007bff;
+
+}
+.fp-back-btn button:hover {
+    background-color: rgb(118, 118, 128);
+    /* Optionally, you can change other properties like color, border, etc. */
+}

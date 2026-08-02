@@ -158,3 +158,10 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+.DS_Store
+Python-Book/python-30-days/data/HN_posts_year_to_Sep_26_2016.csv
+projects/30-days-of-python-legacy/data/HN_posts_year_to_Sep_26_2016.csv
+Udacity_practice_for_Ml_Datascience/project-5/reinforcement-result-analysis/cgn_secondreward_\[1, 2, 3, 4\].json
+Udacity_practice_for_Ml_Datascience/project-4/MDPIntro.pdf
+Udacity_practice_for_Ml_Datascience/project-5/images/untuned-learner-cgn.mkv

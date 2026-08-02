@@ -1,0 +1,59 @@
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #5b5b5b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+/* Git.css */
+.git-page {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.git-page h1, .git-page h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.git-page h2 {
+    color: #0056b3;
+    margin-top: 30px;
+}
+
+.git-page p, .git-page pre {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.git-page section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.git-page pre {
+    background-color: #eef5ff;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.git-page code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #d63384;
+}
+
+
+

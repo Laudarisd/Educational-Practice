@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+
+<style>
+/* Footer */
+body {
+  margin: 0;
+  padding-bottom: 70px; /* Increase padding to create space for the footer */
+}
+
+.footer {
+  margin-top: 20px; /* Add a top margin */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Set the background color to a transparent black */
+  padding: 5px; /* Decreased padding */
+  text-align: left; /* Align text to the left */
+  font-size: inherit; /* Maintain the font size */
+  height: 30px; /* Decreased height of the footer bar */
+  color: #ffffff; /* Set the font color to white */
+  display: none; /* Hide the footer by default */
+}
+
+.footer.show-footer {
+  display: block; /* Show the footer when the class is added */
+}
+
+.footer-text-left {
+  display: inline-block; /* Display text in a line */
+}
+
+.footer-content-right {
+  display: inline-block; /* Display logo in a line */
+  float: right; /* Float logo to the right */
+}
+
+.footer-content-right .icon-style {
+  width: 15px; /* Decreased logo size */
+  height: 15px; /* Decreased logo size */
+  margin-left: 10px; /* Add some space between logos */
+}
+
+.icon-style {
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon-style:hover {
+  transform: scale(1.2);
+  background-color: #2E6AFF;
+  border-radius: 50%;
+}
+
+/* add this rule to make the footer stay at the bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  flex: 1;
+}
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="footer" id="footer">
+    <div class="footer-text-left">
+      <a href="" class="menu">home</a>
+      <a href="" class="menu">about</a>
+      <a href="{% url 'contact' %}" class="menu">credits</a>
+    </div>
+    <div class="footer-content-right">
+      <a href="https://github.com/digitalocean"><img src="{% static 'img/Github.png' %}" class="icon-style" alt="Github"></a>
+      <a href="https://www.twitter.com/DigitalOcean"><img src="{% static 'img/Twitter.png' %}" class="icon-style" alt="Twitter"></a>
+      <a href="https://www.twitter.com"><img src="{% static 'img/Gmail.png' %}" class="icon-style" alt="Email"></a>
+    </div>
+  </div>
+
+<script>
+
+// For footer
+
+window.addEventListener("scroll", function() {
+    var footer = document.getElementById("footer");
+    var scrollPosition = window.innerHeight + window.pageYOffset;
+    var pageHeight = document.documentElement.scrollHeight;
+    
+    if (scrollPosition >= pageHeight) {
+      footer.classList.add("show-footer");
+    } else {
+      footer.classList.remove("show-footer");
+    }
+  });
+  
+
+</script>
+
+{% endblock %}

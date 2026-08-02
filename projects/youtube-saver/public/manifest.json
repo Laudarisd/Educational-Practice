@@ -1,0 +1,49 @@
+{
+  "short_name": "YTubeSaver",
+  "name": "YTubeSaver - Universal Video Downloader",
+  "description": "Download videos and audio from YouTube and Instagram on PC and Android",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FF6B6B",
+  "background_color": "#0f0f0f",
+  "orientation": "portrait-primary",
+  "categories": ["utilities", "multimedia", "productivity"],
+  "screenshots": [
+    {
+      "src": "logo512.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Quick Download",
+      "short_name": "Download",
+      "description": "Start downloading a video",
+      "url": "/?action=download",
+      "icons": [{ "src": "logo192.svg", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr"
+}

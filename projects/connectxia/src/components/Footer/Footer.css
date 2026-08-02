@@ -1,0 +1,47 @@
+/* Footer shell */
+.cx-footer {
+  padding: 26px 0;
+  border-top: 1px solid var(--border);
+  background: rgba(255,255,255,0.55);
+}
+
+/* Footer content alignment */
+.cx-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Brand name style */
+.cx-footer__name {
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+
+/* Brand motto style */
+.cx-footer__motto {
+  color: var(--muted);
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+/* Metadata columns row */
+.cx-footer__cols {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+/* Metadata label text */
+.cx-footer__label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+/* Metadata value text */
+.cx-footer__value {
+  font-weight: 650;
+}

@@ -1,0 +1,35 @@
+/* Theme tokens */
+:root {
+  /* Fonts */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 34px;
+
+  /* Layout sizing */
+  --container: 1120px;
+  --radius: 16px;
+
+  /* Color palette */
+  --bg: #f7fbff;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+
+  --primary: #0ea5a4;      /* teal */
+  --primary-2: #3b82f6;    /* blue */
+  --accent: #22c55e;       /* subtle green for “growth” */
+  --border: rgba(15, 23, 42, 0.10);
+
+  /* Shadow tokens */
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+
+  /* Gradient tokens */
+  --grad-soft: radial-gradient(1200px 500px at 15% 0%, rgba(14,165,164,.18), transparent 60%),
+               radial-gradient(1000px 600px at 80% 10%, rgba(59,130,246,.18), transparent 55%);
+
+  --grad-button: linear-gradient(90deg, var(--primary), var(--primary-2));
+
+  /* Component-specific layout tokens */
+  --nav-h: 72px;
+}

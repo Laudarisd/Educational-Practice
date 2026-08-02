@@ -1,0 +1,45 @@
+/* Statement card shell */
+.ourWord {
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative gradient glow */
+.ourWord::before {
+  content: "";
+  position: absolute;
+  inset: -40% -30%;
+  background: radial-gradient(circle at 20% 10%, rgba(14,165,164,.16), transparent 45%),
+              radial-gradient(circle at 80% 30%, rgba(59,130,246,.16), transparent 45%);
+  pointer-events: none;
+}
+
+/* Keep content above decorative layer */
+.ourWord > * { position: relative; }
+
+/* Section badge */
+.ourWord__badge {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.8);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+/* Statement title */
+.ourWord__title {
+  margin: 10px 0 10px;
+  letter-spacing: -0.02em;
+}
+
+/* Key points list */
+.ourWord__points {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+}
