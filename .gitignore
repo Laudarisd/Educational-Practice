@@ -165,3 +165,11 @@ projects/30-days-of-python-legacy/data/HN_posts_year_to_Sep_26_2016.csv
 Udacity_practice_for_Ml_Datascience/project-5/reinforcement-result-analysis/cgn_secondreward_\[1, 2, 3, 4\].json
 Udacity_practice_for_Ml_Datascience/project-4/MDPIntro.pdf
 Udacity_practice_for_Ml_Datascience/project-5/images/untuned-learner-cgn.mkv
+
+# Local secrets
+.env.*
+!.env.example
+
+# Local-only files
+Thumbs.db
+*.pyc
